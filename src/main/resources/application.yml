@@ -1,0 +1,22 @@
+server:
+  port: 9411
+
+spring:
+  rabbitmq:
+    host: 192.168.3.212
+    port: 5672
+    username: zipkin
+    password: zipkin@2017
+    virtualHost: /
+  datasource:
+    url: jdbc:mysql://localhost:3306/zipkin?characterEncoding=utf8&useSSL=false
+    username: root
+    password: fuckyou1234
+    # Switch this on to create the schema on startup:
+    initialize: false
+    continueOnError: true
+  sleuth:
+    enabled: false
+zipkin:
+  storage:
+    type: mysql
